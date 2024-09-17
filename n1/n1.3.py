@@ -1,9 +1,13 @@
-m = []
-with open("../../Library/Application Support/JetBrains/PyCharmCE2024.2/scratches/input.txt", "r") as f:
-    for s in f: m.append(sum([int(x) for x in s.split()]))
+with open("input.txt", "r") as f:
+    for s in f:
+        a1 = [int(x) for x in s.split()]
+        a,b = a1[0],a1[1]
+        t = a+b
 
-with open("../../Library/Application Support/JetBrains/PyCharmCE2024.2/scratches/output.txt", "w") as z:
-    z.write(str(m[0]))
+with open("output.txt", "w") as z:
+    if -10**9<=a<=10**9 and -10**9<=b<=10**9:
+        z.write(str(t))
+    else: z.write("Ошибка")
     z.close()
 
 
