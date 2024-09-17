@@ -1,6 +1,6 @@
 import time
 t_start = time.time()
-with open("../../Library/Application Support/JetBrains/PyCharmCE2024.2/scratches/fib2_input", "r") as f:
+with open("../../Library/Application Support/JetBrains/PyCharmCE2024.2/scratches/n4_input_n3", "r") as f:
     for s in f:
         a = [int(x) for x in s.split()]
 
@@ -11,7 +11,7 @@ for i in range(2,x):
     t = str(fb2)
     t2 = t[-1]
 
-with open("../../Library/Application Support/JetBrains/PyCharmCE2024.2/scratches/fib2_output", "w") as z:
+with open("../../Library/Application Support/JetBrains/PyCharmCE2024.2/scratches/n4_output_n3", "w") as z:
     z.write(t2)
     z.close()
 print(time.time()-t_start)
