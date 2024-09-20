@@ -17,3 +17,5 @@ with open("n4_output_n2", "w") as z:
         print(time.time() - t_start)
     else: print("Ошибка")
     z.close()
+
+

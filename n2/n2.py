@@ -12,3 +12,4 @@ with open("fib_output", "w") as z:
     if 0<=n<=45: z.write(str(t))
     else: print("Ошибка")
     z.close()
+

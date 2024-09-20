@@ -20,3 +20,5 @@ with open("n4_output_n3", "w") as z:
     z.write(str(LF(t2)))
     z.close()
 print(time.time()-t_start)
+
+
