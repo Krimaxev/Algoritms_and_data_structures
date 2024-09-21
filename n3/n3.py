@@ -1,5 +1,5 @@
 def LF(x):
-    if x==0: return 0
+    if x==0: return 1
     fb1,fb2 = 0,1
     for i in range(x-1):
         fb = (fb1+fb2)%10

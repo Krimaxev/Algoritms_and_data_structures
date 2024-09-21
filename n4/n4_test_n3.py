@@ -2,7 +2,7 @@ import time
 t_start = time.time()
 
 def LF(x):
-    if x==0: return 0
+    if x==0: return 1
     fb1,fb2 = 0,1
     for i in range(x-1):
         fb = (fb1+fb2)%10
@@ -20,5 +20,8 @@ with open("n4_output_n3", "w") as z:
     z.write(str(LF(t2)))
     z.close()
 print(time.time()-t_start)
+
+
+
 
 
