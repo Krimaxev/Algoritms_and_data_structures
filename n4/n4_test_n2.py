@@ -12,10 +12,14 @@ for i in range(2,n):
 t = str(fb2)
 
 with open("n4_output_n2", "w") as z:
-    if 0<=n<=45:
+    if n==0:
+        z.write("0")
+        print(time.time() - t_start)
+    if 0<n<=45:
         z.write(str(t))
         print(time.time() - t_start)
-    else: print("Ошибка")
+    if n<0 or n>45: print("Ошибка")
     z.close()
+
 
 

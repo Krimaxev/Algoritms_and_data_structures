@@ -9,7 +9,10 @@ for i in range(2,n):
 t = str(fb2)
 
 with open("fib_output", "w") as z:
-    if 0<=n<=45: z.write(str(t))
-    else: print("Ошибка")
+    if n==0: z.write("0")
+    if 0<n<=45: z.write(str(t))
+    if n<0 or n>45: print("Ошибка")
     z.close()
+
+
 
