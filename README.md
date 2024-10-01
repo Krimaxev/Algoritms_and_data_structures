@@ -1,1 +1,1 @@
-Algorithms and data structures (lab_0)
+Algorithms and data structures
