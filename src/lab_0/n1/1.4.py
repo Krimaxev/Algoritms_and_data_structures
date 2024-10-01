@@ -5,7 +5,7 @@ with open("input.txt", "r") as f:
         t = a+b**2
 
 with open("output.txt", "w") as z:
-    if -10**9<=a<=10**9 and -10**9<=b<=10**9:
+    if -10**9 <= a <= 10**9 and -10**9 <= b <= 10**9:
         z.write(str(t))
     else: z.write("Ошибка")
     z.close()
