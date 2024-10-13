@@ -2,7 +2,6 @@ import sys
 import time
 import resource
 time_start = time.perf_counter()
-
 def Selection_sort(a):
     for i in range(0,len(a)-1):
         mn = i
@@ -11,7 +10,6 @@ def Selection_sort(a):
                 mn = j
         a[i],a[mn] = a[mn],a[i]
     return a
-
 f,f2 = open("input_n5","r"),open("output_n5","w")
 l,l2= int(f.readline()),f.readline()
 m = [int(x) for x in l2.split()]

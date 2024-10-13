@@ -2,14 +2,11 @@ import sys
 import time
 import resource
 time_start = time.perf_counter()
-
 f,f2 = open("input_n2","r"),open("output_n2","w")
 l,l2= int(f.readline()),f.readline()
 m = [int(x) for x in l2.split()]
 m2 = []
-
 if l!=len(m): print("Ошибка")
-
 for j in range(len(m)):
     key = m[j]
     u = j - 1
@@ -18,7 +15,6 @@ for j in range(len(m)):
         u = u - 1
     m[u + 1] = key
     m2.append(m.index(key))
-
 s = ''
 s1 = ''
 m1 = [str(x) for x in m]
