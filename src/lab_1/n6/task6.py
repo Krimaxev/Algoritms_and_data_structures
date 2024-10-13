@@ -34,3 +34,4 @@ memMb=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024.0/1024.0
 print("ВРЕМЯ:",time_elapsed)
 print ("Память:%5.1f МБ" % (memMb))
 print(f"Размер списка: {sys.getsizeof(m)} байт")
+
