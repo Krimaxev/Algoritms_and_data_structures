@@ -10,7 +10,7 @@ def insertion_sort(a):
             a[u+1]=a[u]
             u = u-1
         a[u+1] = key
-
+    return a
 f,f2 = open("input_n1","r"),open("output_n1","w")
 l,l2= int(f.readline()),f.readline()
 m = [int(x) for x in l2.split()]
@@ -19,9 +19,9 @@ if l!=len(m): print("Ошибка")
 for i in range(len(m)):
     if abs(m[i])>10**9: print("Ошибка")
 
-insertion_sort(m)
+t = insertion_sort(m)
 s = ''
-m1 = [str(x) for x in m]
+m1 = [str(x) for x in t]
 for z in m1:
     s+=z
     s+=' '

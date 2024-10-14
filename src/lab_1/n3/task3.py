@@ -2,12 +2,14 @@ import sys
 import time
 import resource
 time_start = time.perf_counter()
-def IS(a):
-    for j in range(1,len(a)):
-        u=j
-        while u > 0 and a[u] > a[u-1]:
-            a[u],a[j]=a[j],a[u]
-            u = u - 1
+def insertion_sort(a):
+    for j in range(len(a)):
+        key = a[j]
+        u = j-1
+        while u>=0 and a[u]<key:
+            a[u+1]=a[u]
+            u = u-1
+        a[u+1] = key
     return a
 f,f2 = open("input_n3","r"),open("output_n3","w")
 l,l2= int(f.readline()),f.readline()
@@ -16,7 +18,7 @@ if l==0 or l>10**3: print("Лимит длины превышен")
 if l!=len(m): print("Ошибка")
 for i in range(len(m)):
     if abs(m[i])>10**9: print("Ошибка")
-t = IS(m)
+t = insertion_sort(m)
 s = ''
 m1 = [str(x) for x in m]
 for z in m1:
