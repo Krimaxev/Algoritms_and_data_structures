@@ -46,7 +46,6 @@ if __name__=="__main__":
     s = ''
 
     check = Check(l,m)
-
     m1 = Merge_sort(m)
 
     for j in range(len(m1)):
