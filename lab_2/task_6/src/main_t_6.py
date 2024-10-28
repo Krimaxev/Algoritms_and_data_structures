@@ -33,5 +33,6 @@ if __name__=="__main__":
              f"Date of purchase: {date[min_i]} Purchase price: {buy_price}\n"
              f"Date of sale: {date[max_i]} Sale price: {sell_price}\n"
              f"Profit: {profit}")
+
     f1.close()
     f2.close()

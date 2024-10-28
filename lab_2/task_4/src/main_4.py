@@ -26,8 +26,8 @@ if __name__=="__main__":
         t = str(Binary_search(m1, m2[i]))
         s+=t
         s+=' '
-    f2.write(s)
 
+    f2.write(s)
     f1.close()
     f2.close()
 

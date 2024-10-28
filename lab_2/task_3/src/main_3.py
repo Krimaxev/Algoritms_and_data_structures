@@ -23,7 +23,6 @@ if __name__=="__main__":
     el = [int(x) for x in l2.split()]
 
     check = (l,el)
-
     res = Inverse(el)
     f2.write(str(res))
 

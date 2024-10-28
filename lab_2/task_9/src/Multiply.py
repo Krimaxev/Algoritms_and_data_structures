@@ -22,5 +22,4 @@ def Check(file_i, file_o):
 
 
 if __name__ == "__main__":
-
     Check("../txtf/input_task_9", "../txtf/output_task_9")

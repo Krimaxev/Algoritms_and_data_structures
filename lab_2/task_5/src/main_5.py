@@ -27,7 +27,7 @@ if __name__=="__main__":
     check = (l,m)
 
     res = Majority(m)
-    f2.write(str(res))
 
+    f2.write(str(res))
     f1.close()
     f2.close()
