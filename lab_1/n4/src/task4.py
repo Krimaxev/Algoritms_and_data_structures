@@ -5,7 +5,7 @@ import resource
 
 time_start = time.perf_counter()
 
-f, f2 = open("input_n4", "r"), open("output_n4", "w")
+f, f2 = open("../txtf/input_n4", "r"), open("../txtf/output_n4", "w")
 l, l2 = f.readline(), int(f.readline())
 m = [int(x) for x in l.split()]
 

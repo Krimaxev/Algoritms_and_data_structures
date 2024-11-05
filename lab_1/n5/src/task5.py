@@ -10,7 +10,7 @@ def Selection_sort(a):
                 mn = j
         a[i],a[mn] = a[mn],a[i]
     return a
-f,f2 = open("input_n5", "r"),open("output_n5", "w")
+f,f2 = open("../txtf/input_n5", "r"),open("../txtf/output_n5", "w")
 l,l2= int(f.readline()),f.readline()
 m = [int(x) for x in l2.split()]
 

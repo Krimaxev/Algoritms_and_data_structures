@@ -2,28 +2,30 @@ import sys
 import time
 import resource
 time_start = time.perf_counter()
-def insertion_sort(a):
-    for j in range(len(a)):
-        key = a[j]
-        u = j-1
-        while u>=0 and a[u]<key:
-            a[u+1]=a[u]
-            u = u-1
-        a[u+1] = key
-    return a
-f,f2 = open("input_n3", "r"),open("output_n3", "w")
+f,f2 = open("../txtf/input_n2", "r"),open("../txtf/output_n2", "w")
 l,l2= int(f.readline()),f.readline()
 m = [int(x) for x in l2.split()]
-if l==0 or l>10**3: print("Лимит длины превышен")
+m2 = []
 if l!=len(m): print("Ошибка")
-for i in range(len(m)):
-    if abs(m[i])>10**9: print("Ошибка")
-t = insertion_sort(m)
+for j in range(len(m)):
+    key = m[j]
+    u = j - 1
+    while u >= 0 and m[u] > key:
+        m[u + 1] = m[u]
+        u = u - 1
+    m[u + 1] = key
+    m2.append(m.index(key))
 s = ''
+s1 = ''
 m1 = [str(x) for x in m]
+m3 = [str(x+1) for x in m2]
 for z in m1:
     s+=z
     s+=' '
+for p in m3:
+    s1+=p
+    s1+=' '
+f2.writelines(s1+"\n")
 f2.writelines(s)
 f.close()
 f2.close()

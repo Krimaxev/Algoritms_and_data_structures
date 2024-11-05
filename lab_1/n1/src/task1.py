@@ -16,7 +16,7 @@ def insertion_sort(a):
     return a
 
 
-f, f2 = open("input_n1", "r"), open("output_n1", "w")
+f, f2 = open("../txtf/input_n1", "r"), open("../txtf/output_n1", "w")
 l, l2 = int(f.readline()), f.readline()
 m = [int(x) for x in l2.split()]
 if l == 0 or l > 10 ** 3: print("Лимит длины превышен")

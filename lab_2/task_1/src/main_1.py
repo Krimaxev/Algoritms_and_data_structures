@@ -1,5 +1,6 @@
+from lab_2.utils import *
 
-def Merge(left_list, right_list):
+def merge(left_list, right_list):
     res = []
     i = j = 0
 
@@ -21,35 +22,21 @@ def Merge(left_list, right_list):
             i += 1
     return res
 
-def Merge_sort(x):
+def merge_sort(x):
     if len(x) <= 1:
         return x
 
     median_x = len(x) // 2
-    left_list = Merge_sort(x[:median_x])
-    right_list = Merge_sort(x[median_x:])
-    return Merge(left_list, right_list)
+    left_list = merge_sort(x[:median_x])
+    right_list = merge_sort(x[median_x:])
+    return merge(left_list, right_list)
 
-def Check(len_1,list_1):
-    if (len_1==0 or len_1>(2*10**4)):
-        return "Отсутствие/превышение лимита длины"
-    if (len_1 != len(list_1)):
-        return "Ошибка"
-    for j in range(len(list_1)):
-        if abs(list_1[j]) > 10 ** 9:
-            return "Лимит одного из элементов превышен"
 
 if __name__=="__main__":
-    f, f2 = open("../txtf/input_task_1", "r"), open("../txtf/output_task_1", "w")
-    l, l2 = int(f.readline()), f.readline()
-    m = [int(x) for x in l2.split()]
-    s = ''
+    file = operation_with_file("../txtf/input_task_1")
+    m1 = merge_sort(file)
+    res = string(m1)
+    output = output_file("../txtf/output_task_1", res)
+    print(first_check(input_file_n("../txtf/input_task_1"),operation_with_file("../txtf/input_task_1")))
 
-    check = Check(l,m)
-    m1 = Merge_sort(m)
-
-    for j in range(len(m1)):
-        s += str(m1[j])
-        s += " "
-    f2.write(s)
 
