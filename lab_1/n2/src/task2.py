@@ -1,7 +1,28 @@
-import sys
-import time
-import resource
+from lab_1.utils import *
+
+def insertion_sort(a):
+    res = []
+    for j in range(len(a)):
+        key = a[j]
+        u = j - 1
+        while u >= 0 and a[u] > key:
+            a[u + 1] = a[u]
+            u = u - 1
+        a[u + 1] = key
+        res.append(a.index(key))
+    return res
+
+if __name__=="__main__":
+    file = operation_with_file("../txtf/input_n2")
+    ins_sort = insertion_sort(file)
+    conv_1 = convert_to_string(file)
+    conv_2 = convert_to_string_2(ins_sort)
+    w_1 = write_s_plus("../txtf/output_n2",conv_2)
+    w_2 = write_s("../txtf/output_n2", conv_1)
+
+'''
 time_start = time.perf_counter()
+
 f,f2 = open("../txtf/input_n2", "r"),open("../txtf/output_n2", "w")
 l,l2= int(f.readline()),f.readline()
 m = [int(x) for x in l2.split()]
@@ -33,4 +54,4 @@ time_elapsed = (time.perf_counter() - time_start)
 memMb=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024.0/1024.0
 print("ВРЕМЯ:",time_elapsed)
 print ("Память:%5.1f МБ" % (memMb))
-print(f"Размер списка: {sys.getsizeof(m)} байт")
+print(f"Размер списка: {sys.getsizeof(m)} байт")'''

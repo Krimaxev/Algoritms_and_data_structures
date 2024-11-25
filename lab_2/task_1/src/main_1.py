@@ -33,10 +33,14 @@ def merge_sort(x):
 
 
 if __name__=="__main__":
-    file = operation_with_file("../txtf/input_task_1")
-    m1 = merge_sort(file)
-    res = string(m1)
-    output = output_file("../txtf/output_task_1", res)
-    print(first_check(input_file_n("../txtf/input_task_1"),operation_with_file("../txtf/input_task_1")))
+    input_file = "../txtf/test_1_input"
+    output_file = "../txtf/test_1_output"
+
+    data = read_input(input_file)
+    if data:
+        sorted_data = merge_sort(data)
+        write_output(output_file, sorted_data)
+
+    print(first_check(input_file_n("../txtf/test_1_input"),operation_with_file("../txtf/test_1_input")))
 
 

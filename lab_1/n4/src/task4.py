@@ -13,6 +13,7 @@ if len(m) > 10 ** 3: print("Лимит длины превышен")
 for j in range(len(m)):
     if m[j] < -10 ** 3 or m[j] > 10 ** 3: print("Ошибка")
 if l2 < -10 ** 3 or l2 > 10 ** 3: print("Лимит значения превышен")
+
 m1 = [x for x, y in enumerate(m) if y == l2]
 
 str_count = str(len(m1))

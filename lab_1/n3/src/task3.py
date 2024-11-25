@@ -1,8 +1,6 @@
-import sys
-import time
-import resource
-time_start = time.perf_counter()
-def insertion_sort(a):
+from lab_1.utils import *
+
+def insertion_sort_3(a):
     for j in range(len(a)):
         key = a[j]
         u = j-1
@@ -11,24 +9,9 @@ def insertion_sort(a):
             u = u-1
         a[u+1] = key
     return a
-f,f2 = open("../txtf/input_n3", "r"),open("../txtf/output_n3", "w")
-l,l2= int(f.readline()),f.readline()
-m = [int(x) for x in l2.split()]
-if l==0 or l>10**3: print("Лимит длины превышен")
-if l!=len(m): print("Ошибка")
-for i in range(len(m)):
-    if abs(m[i])>10**9: print("Ошибка")
-t = insertion_sort(m)
-s = ''
-m1 = [str(x) for x in m]
-for z in m1:
-    s+=z
-    s+=' '
-f2.writelines(s)
-f.close()
-f2.close()
-time_elapsed = (time.perf_counter() - time_start)
-memMb=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024.0/1024.0
-print("ВРЕМЯ:",time_elapsed)
-print ("Память:%5.1f МБ" % (memMb))
-print(f"Размер списка: {sys.getsizeof(m)} байт")
+
+if __name__=="__main__":
+    file = operation_with_file("../txtf/input_n3")
+    print(check(input_f("../txtf/input_n3"),file))
+    ins_sort = string(file)
+    w_1 = write_s("../txtf/output_n3", ins_sort)

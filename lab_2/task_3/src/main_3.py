@@ -1,6 +1,4 @@
 from lab_2.utils import *
-
-from lab_2.utils import *
 def inverse(a):
     c = 0
     for i in range(len(a)):
