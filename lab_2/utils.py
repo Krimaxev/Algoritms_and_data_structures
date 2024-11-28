@@ -1,4 +1,4 @@
-from lab_2.task_4.src.main_4 import *
+
 from lab_2.task_6.src.main_t_6 import *
 
 def input_file_n(a):
@@ -8,8 +8,8 @@ def input_file_n(a):
 
 def operation_with_file(a):
     f1 = open(a, "r")
-    n = int(f1.readline())
-    m = [list(map(int, f1.readline().split())) for x in range(n)]
+    l1 = int(f1.readline())
+    m = [int(x) for x in f1.readline().split()]
     f1.close()
     return m
 
@@ -34,27 +34,27 @@ def write_output(filepath, arr):
 def first_check(input_data, sorted_data):
     return sorted(input_data) == sorted_data
 
-def second_file_operation(a):
+def second_file_operation_list1(a):
     f1 = open("../txtf/input_task_4", "r")
     l1, l2, l3, l4 = int(f1.readline()), f1.readline(), int(f1.readline()), f1.readline()
     m1, m2 = [int(x) for x in l2.split()], [int(x) for x in l4.split()]
     f1.close()
     return m1
 
-def second_file_operation_x(a):
+def second_file_operation_list2(a):
     f1 = open("../txtf/input_task_4", "r")
     l1, l2, l3, l4 = int(f1.readline()), f1.readline(), int(f1.readline()), f1.readline()
     m1, m2 = [int(x) for x in l2.split()], [int(x) for x in l4.split()]
     f1.close()
     return m2
 
-def second_file_operation_l1(a):
+def second_file_operation_line1(a):
     f1 = open("../txtf/input_task_4", "r")
     l1, l2, l3, l4 = int(f1.readline()), f1.readline(), int(f1.readline()), f1.readline()
     f1.close()
     return l1
 
-def second_file_operation_l3(a):
+def second_file_operation_line3(a):
     f1 = open("../txtf/input_task_4", "r")
     l1, l2, l3, l4 = int(f1.readline()), f1.readline(), int(f1.readline()), f1.readline()
     f1.close()
@@ -72,13 +72,6 @@ def string(a):
         s += " "
     return s
 
-def string_task_four(a,b):
-    s = ''
-    for j in range(len(a)):
-        s += str(binary_search(b,a[j]))
-        s += " "
-    return s
-
 def first_check(len_1,list_1):
     if (len_1==0 or len_1>(2*10**5)):
         return "Отсутствие/превышение лимита длины"
@@ -93,25 +86,28 @@ def first_check(len_1,list_1):
 
 def check(len_1,list_1):
     if (len_1==0 or len_1>10**5):
-        return "Отсутствие/превышение лимита длины"
+        return False
     if (len_1 != len(list_1)):
-        return "Ошибка"
+        return False
     for j in range(len(list_1)):
-        for k in list_1[j]:
-            if abs(k) > 10 ** 9:
-                return "Лимит одного из элементов превышен"
+        if abs(list_1[j]) > 10 ** 9:
+            return False
     else:
-        return "Входные данные корректны"
+        return True
 
 def second_check(len_1,len_2,list_1,list_2):
-    if (len_1==0 or len_1>10**5) or (len_2 == 0 or len_2 > 10 ** 5): return "Отсутствие/превышение лимита длины"
-    if (len_1 != len(list_1)) or (len_2 != len(list_2)): return "Ошибка"
+    if (len_1==0 or len_1>10**5) or (len_2 == 0 or len_2 > 10 ** 5):
+        return False
+    if (len_1 != len(list_1)) or (len_2 != len(list_2)):
+        return False
     for j in range(len(list_1)):
-        if abs(list_1[j]) > 10 ** 9: return "Лимит одного из элементов превышен"
+        if abs(list_1[j]) > 10 ** 9:
+            return False
     for k in range(len(list_2)):
-        if abs(list_2[k]) > 10 ** 9: return "Лимит одного из элементов превышен"
+        if abs(list_2[k]) > 10 ** 9:
+            return False
     else:
-        return "Входные данные корректны"
+        return True
 
 
 def subarray_operation(a, b):

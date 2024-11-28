@@ -50,7 +50,7 @@ def strassen(A, B):
 
         return merge(C11, C12, C21, C22)
 
-def Check(file_inp, file_out):
+def check(file_inp, file_out):
     with open(file_inp, 'r') as f:
         n = int(f.readline())
         A = [list(map(int, f.readline().split())) for k in range(n)]
@@ -63,4 +63,6 @@ def Check(file_inp, file_out):
             f.write(' '.join(map(str, res1)) + '\n')
 
 if __name__=="__main__":
-    Check("../txtf/input_task_9", "../txtf/output_task_9")
+    FILE_INPUT = "../txtf/input_task_9"
+    FILE_OUTPUT = "../txtf/output_task_9"
+    check(FILE_INPUT, FILE_OUTPUT)

@@ -8,7 +8,7 @@ def multiply(n, X, Y):
                 Z[i][j] += Y[k][j]
     return Z
 
-def Check(file_i, file_o):
+def check(file_i, file_o):
     with open(file_i, 'r') as f:
         n = int(f.readline())
         A = [list(map(int, f.readline().split())) for k in range(n)]
@@ -22,4 +22,6 @@ def Check(file_i, file_o):
 
 
 if __name__ == "__main__":
-    Check("../txtf/input_task_9", "../txtf/output_task_9")
+    FILE_INPUT = "../txtf/input_task_9"
+    FILE_OUTPUT = "../txtf/output_task_9"
+    check(FILE_INPUT, FILE_OUTPUT)

@@ -7,8 +7,6 @@ def max_subarray(prices, dates):
     min_price = float('inf')
     min_price_index = -1
     max_profit = 0
-    best_buy_date = None
-    best_sell_date = None
 
     for i in range(len(prices)):
         if prices[i] < min_price:
@@ -31,4 +29,6 @@ def max_subarray(prices, dates):
         return [0, 0, 0, None, None]
 
 if __name__=="__main__":
-    a = subarray_operation("../txtf/input_task_6","../txtf/output_task_6")
+    FILE_INPUT = "../txtf/input_task_6"
+    FILE_OUTPUT = "../txtf/output_task_6"
+    subarray_operation(FILE_INPUT,FILE_OUTPUT)

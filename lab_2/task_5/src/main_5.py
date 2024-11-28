@@ -12,8 +12,16 @@ def majority(a):
     return 0
 
 if __name__=="__main__":
-    file = operation_with_file("../txtf/input_task_5")
-    print(check(input_file_n("../txtf/input_task_5"),file))
-    res = majority(file)
-    file_o = output_file("../txtf/output_task_5",str(res))
+    FILE_INPUT = "../txtf/input_task_5"
+    FILE_OUTPUT = "../txtf/output_task_5"
+    file = operation_with_file(FILE_INPUT)
+    check_f = check(input_file_n(FILE_INPUT),file)
+    if check_f:
+        res = majority(file)
+        file_o = output_file(FILE_INPUT,str(res))
+        print("Входные данные корректны")
+    else:
+        output_file(FILE_OUTPUT, "Ошибка входных данных")
+        print("Ошибка входных данных")
+
 
