@@ -1,4 +1,4 @@
-from lab_4.utils import read_input, write_output, string, check
+from lab_4.utils import read_input, write_output, string, check, string_column
 
 
 def steck(a):
@@ -15,7 +15,7 @@ if __name__=="__main__":
     list = read_input(FILE_INPUT)
     check = check(FILE_INPUT)
     if check:
-        result = string(steck(list))
+        result = string_column(steck(list))
         write_output(FILE_OUTPUT,result)
         print("Входные данные корректны")
     if not(check):

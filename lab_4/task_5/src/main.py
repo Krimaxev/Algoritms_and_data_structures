@@ -1,4 +1,4 @@
-from lab_4.utils import read_input, check_five, write_output, string
+from lab_4.utils import read_input, check_five, write_output, string, string_column
 
 
 def process_stack(commands):
@@ -34,7 +34,7 @@ if __name__=="__main__":
     check = check_five(FILE_INPUT)
     if check:
         result = process_stack(list)
-        write_output(FILE_OUTPUT,string(result))
+        write_output(FILE_OUTPUT,string_column(result))
         print("Входные данные корректны")
     else:
         write_output(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")

@@ -1,4 +1,4 @@
-from lab_4.utils import read_input,write_output,string, check_three
+from lab_4.utils import read_input, write_output, string, check_three, string_column
 
 
 def bracket_sequence(a):
@@ -26,7 +26,7 @@ def bracket_sequence(a):
 
         results.append("ДА" if is_valid else "НЕТ")
 
-    return string(results)
+    return string_column(results)
 
 
 if __name__=="__main__":
