@@ -1,19 +1,39 @@
-'''import heapq
+from lab_3.utils import read_input, write_output, eighth_check, output_operation
+import math
 
-def find_k_closest(points, k):
-    if not points:
-        return []
+def closest_points(points, k):
+    distances = []
 
-    closest_points = []
-    for x, y in points:
-        distance_squared = x ** 2 + y ** 2
-        heapq.heappush(closest_points, (-distance_squared, (x, y)))
-        if len(closest_points) > k:
-            heapq.heappop(closest_points)
+    for point in points:
+        if isinstance(point, tuple) and len(point) == 2:
+            x, y = point
+            distance = math.sqrt(x ** 2 + y ** 2)
+            distances.append((distance, point))
+        else:
+            raise ValueError("Каждая точка должна быть кортежем с двумя координатами.")
 
-    result = [point for _, point in closest_points]
-    return result
+    distances.sort(key=lambda x: x[0])
+    return [point for _, point in distances[:k]]
+
+if __name__ == "__main__":
+    FILE_INPUT = "../txtf/input"
+    FILE_OUTPUT = "../txtf/output"
+    points, k = read_input(FILE_INPUT)
+    point_check = eighth_check(FILE_INPUT)
+    if point_check:
+        result = closest_points(points, k)
+        write_output(FILE_OUTPUT, result)
+        print("Входные данные корректны")
+    else:
+        output_operation(FILE_OUTPUT, "Ошибка входных данных")
+        print("Ошибка входных данных")
 
 
-if __name__=="__main__":'''
+
+
+
+
+
+
+
 

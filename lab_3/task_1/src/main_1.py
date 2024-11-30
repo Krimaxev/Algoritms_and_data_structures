@@ -1,6 +1,6 @@
 import random
 import heapq
-from lab_3.utils import input_operation, output_operation, first_check
+from lab_3.utils import input_operation, output_operation, first_check, string
 
 
 def three_way_partition(arr, low, high):
@@ -64,17 +64,25 @@ if __name__=="__main__":
     output_f = "../txtf/output"
     input_f2 = "../txtf/hard_input"
     output_f2 = "../txtf/hard_output"
+    FIRST_CHECK_1 = first_check("../txtf/input")
+    FIRST_CHECK_2 = first_check("../txtf/hard_input")
+    if FIRST_CHECK_1:
+        result = input_operation(input_f)
+        quicksort_threeway(result)
+        output_operation(output_f, string(result))
+        print(f"Входные данные в файле: {input_f} корректны")
+    else:
+        output_operation(output_f, "Ошибка входных данных")
+        print(f"Ошибка входных данных в файле: {input_f}")
 
-    result = input_operation(input_f)
-    quicksort_threeway(result)
-    output_operation(output_f, result)
-
-    result2 = input_operation(input_f2)
-    quicksort_threeway(result2)
-    output_operation(output_f2, result2)
-
-    print(first_check("../txtf/input"))
-    print(first_check("../txtf/hard_input"))
+    if FIRST_CHECK_2:
+        result2 = input_operation(input_f2)
+        quicksort_threeway(result2)
+        output_operation(output_f2, string(result2))
+        print(f"Входные данные в файле: {input_f2} корректны")
+    else:
+        output_operation(output_f2, "Ошибка входных данных")
+        print(f"Ошибка входных данных в файле: {input_f2}")
 
 
 

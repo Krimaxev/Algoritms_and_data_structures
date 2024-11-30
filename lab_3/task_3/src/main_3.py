@@ -1,36 +1,40 @@
 from lab_3.utils import input_operation_two, input_operation_three, third_check, output_operation
 
+def matreshka(arr, k, n):
+    groups = [[] for _ in range(k)]
+    for i in range(n):
+        groups[i % k].append(arr[i])
 
-def matreshka(m,k,i=0):
-    l = len(m)
-    if i == l - 1:
-        return all(m[i] <= m[i+1] for i in range(l - 1))
+    for group in groups:
+        group.sort()
 
-    if all(m[i] <= m[i+1] for i in range(i, l - 1)):
+    sorted_arr = []
+    for i in range(n):
+        sorted_arr.append(groups[i % k][i // k])
+
+    if sorted_arr == sorted(arr):
         return True
-
-    for j in range(i + 1, l):
-        if (j - i) % k == 0 and m[j] < m[i]:
-            new_m = m[:]
-            new_m[j], new_m[i] = new_m[i], new_m[j]
-            if matreshka(new_m,k,i+1):
-                return True
-
-    return False
+    else:
+        return False
 
 if __name__=="__main__":
-    l1 = input_operation_two("../txtf/input")
-    l2 = input_operation_three("../txtf/input")
+    FILE_INPUT = "../txtf/input"
+    FILE_OUTPUT = "../txtf/output"
+    l1 = input_operation_two(FILE_INPUT)
+    l2 = input_operation_three(FILE_INPUT)
     n,k = int(l1[0]), int(l1[1])
-    if third_check("../txtf/input") == "Входные данные корректны":
-        res = matreshka(l2,k)
-        if res == True:
-            file_o = output_operation("../txtf/output","ДА")
-        if res == False:
-            file_o = output_operation("../txtf/output", "НЕТ")
-        print(third_check("../txtf/input"))
+    THIRD_CHECK = third_check(FILE_INPUT)
+    if THIRD_CHECK:
+        result = matreshka(l2, k, n)
+        if result:
+            file_o = output_operation(FILE_OUTPUT,"ДА")
+        if not(result):
+            file_o = output_operation(FILE_OUTPUT, "НЕТ")
+        print("Входные данные корректны")
     else:
-        print(third_check("../txtf/input"))
+        output_operation(FILE_OUTPUT, "Входные данные некорректны")
+        print("Входные данные некорректны")
+
 
 
 

@@ -1,12 +1,6 @@
-from lab_3.utils import input_operation_z, input_operation_z_two, input_operation_z_three, output_operation
+from lab_3.utils import input_operation_z, input_operation_z_two, input_operation_z_three, output_operation, sixth_check
 
-
-def sort_z(file):
-    list = input_operation_z(file)
-    n,m = int(list[0]), int(list[1])
-    a = input_operation_z_two(file)
-    b = input_operation_z_three(file)
-
+def sort_z(a, b):
     products = []
     for x in a:
         for y in b:
@@ -17,6 +11,19 @@ def sort_z(file):
     return total_sum
 
 if __name__=="__main__":
-    output_operation("../txtf/output", sort_z("../txtf/input"))
+    FILE_INPUT = "../txtf/input"
+    FILE_OUTPUT = "../txtf/output"
+    list = input_operation_z(FILE_INPUT)
+    n, m = int(list[0]), int(list[1])
+    a = input_operation_z_two(FILE_INPUT)
+    b = input_operation_z_three(FILE_INPUT)
+    if sixth_check(n,m,a,b):
+        output_operation(FILE_OUTPUT, sort_z(a,b))
+        print("Входные данные корректны")
+    if not(sixth_check(n,m,a,b)):
+        output_operation(FILE_OUTPUT, "Ошибка входных данных")
+        print("Ошибка входных данных")
+
+
 
 
