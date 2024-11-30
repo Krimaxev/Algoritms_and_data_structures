@@ -2,7 +2,7 @@ import sys
 import time
 import resource
 from lab_4.task_1.src.main import steck
-from lab_4.utils import read_input, write_output, string, check
+from lab_4.utils import read_input, write_output, check, string_column
 
 if __name__=="__main__":
     time_start = time.perf_counter()
@@ -12,7 +12,7 @@ if __name__=="__main__":
     list = read_input(FILE_INPUT)
     check = check(FILE_INPUT)
     if check:
-        result = string(steck(list))
+        result = string_column(steck(list))
         write_output(FILE_OUTPUT,result)
 
         time_elapsed = (time.perf_counter() - time_start)

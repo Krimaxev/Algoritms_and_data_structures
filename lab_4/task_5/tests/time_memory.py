@@ -1,7 +1,7 @@
 import sys
 import resource
 import time
-from lab_4.utils import read_input,check_five,write_output,string
+from lab_4.utils import read_input, check_five, write_output, string, string_column
 from lab_4.task_5.src.main import process_stack
 
 if __name__=="__main__":
@@ -13,7 +13,7 @@ if __name__=="__main__":
     check = check_five(FILE_INPUT)
     if check:
         result = process_stack(list)
-        write_output(FILE_OUTPUT,string(result))
+        write_output(FILE_OUTPUT,string_column(result))
 
         time_elapsed = (time.perf_counter() - time_start)
         memMb = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024.0 / 1024.0
