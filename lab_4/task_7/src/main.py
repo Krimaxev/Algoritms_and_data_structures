@@ -1,7 +1,6 @@
 from collections import deque
 from lab_4.utils import string, read_input_seven, check_seven, write_output
 
-
 def max_dynamic_sequence(n,a,m):
     decart_queue = deque()
     result = []

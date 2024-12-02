@@ -1,5 +1,4 @@
-from lab_4.utils import read_input, write_output, string, check_three, string_column
-
+from lab_4.utils import read_input, write_output, check_three, string_column
 
 def bracket_sequence(a):
     results = []
@@ -27,7 +26,6 @@ def bracket_sequence(a):
         results.append("ДА" if is_valid else "НЕТ")
 
     return string_column(results)
-
 
 if __name__=="__main__":
     FILE_INPUT = "../txtf/input.txt"

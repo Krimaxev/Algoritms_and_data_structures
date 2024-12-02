@@ -1,4 +1,3 @@
-import sys
 import time
 import resource
 from lab_3.task_3.src.main_3 import matreshka

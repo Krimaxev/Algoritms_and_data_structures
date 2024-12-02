@@ -1,4 +1,3 @@
-from lab_2.utils import *
 
 def max_subarray(prices, dates):
     if not prices or len(prices) != len(dates):
@@ -31,4 +30,4 @@ def max_subarray(prices, dates):
 if __name__=="__main__":
     FILE_INPUT = "../txtf/input_task_6"
     FILE_OUTPUT = "../txtf/output_task_6"
-    subarray_operation(FILE_INPUT,FILE_OUTPUT)
+    max_subarray(FILE_INPUT,FILE_OUTPUT)

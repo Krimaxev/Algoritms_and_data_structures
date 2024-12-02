@@ -1,7 +1,5 @@
 from collections import deque
-
 from lab_4.utils import read_input, check_nine, write_output, string_column
-
 
 def process_requests(n, requests):
     queue = deque()

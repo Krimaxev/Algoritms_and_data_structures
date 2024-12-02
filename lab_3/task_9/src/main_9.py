@@ -1,4 +1,3 @@
-import math
 from lab_3.utils import nine_check, output_operation, read_input_n
 import math
 

@@ -21,4 +21,3 @@ if __name__ == "__main__":
     else:
         output_operation(FILE_OUTPUT, "Ошибка входных данных")
         print("Ошибка входных данных")
-

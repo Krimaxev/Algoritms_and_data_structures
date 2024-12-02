@@ -25,4 +25,3 @@ if __name__=="__main__":
     if not (sixth_check(n, m, a, b)):
         output_operation(FILE_OUTPUT, "Ошибка входных данных")
         print("Ошибка входных данных")
-

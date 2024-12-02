@@ -41,6 +41,3 @@ if __name__=="__main__":
     else:
         output_operation(output_f2, "Ошибка входных данных")
         print(f"Ошибка входных данных в файле: {input_f2}")
-
-
-

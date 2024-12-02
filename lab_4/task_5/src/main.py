@@ -1,5 +1,4 @@
-from lab_4.utils import read_input, check_five, write_output, string, string_column
-
+from lab_4.utils import read_input, check_five, write_output, string_column
 
 def process_stack(commands):
     stack = []

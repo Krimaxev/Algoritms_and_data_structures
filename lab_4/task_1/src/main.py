@@ -1,4 +1,4 @@
-from lab_4.utils import read_input, write_output, string, check, string_column
+from lab_4.utils import read_input, write_output, check, string_column
 
 
 def steck(a):

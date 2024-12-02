@@ -8,7 +8,7 @@ if __name__ == "__main__":
     FILE_INPUT = "../txtf/input"
     FILE_OUTPUT = "../txtf/output"
     t = open_f(FILE_INPUT)
-    if second_check(t) == "Входное значение корректно":
+    if second_check(t):
         time_start = time.perf_counter()
         worst_case_permutation = generate_worst_case(t)
         res = string(worst_case_permutation)
@@ -21,4 +21,3 @@ if __name__ == "__main__":
         print(f"Размер списка: {sys.getsizeof(res)} байт")
     else:
         print("Входное значение некорректно")
-
