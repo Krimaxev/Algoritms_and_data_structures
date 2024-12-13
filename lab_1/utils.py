@@ -1,14 +1,17 @@
-from lab_1.n1.src.task1 import *
-from lab_1.n3.src.task3 import *
-
-
 def operation_with_file(a):
     f1 = open(a, "r")
     n = int(f1.readline())
     l = f1.readline()
     m = [int(x) for x in l.split()]
     f1.close()
-    return m
+    return n, m
+
+def operation_with_file_four(a):
+    f1 = open(a, "r")
+    m = [int(x) for x in f1.readline().split()]
+    n = int(f1.readline())
+    f1.close()
+    return n, m
 
 def input_f(a):
     f1 = open(a,"r")
@@ -22,22 +25,18 @@ def output_f(a,res):
     f1.close()
 
 def string(a):
-    t = insertion_sort(a)
     s = ''
-    m1 = [str(x) for x in t]
-    for z in m1:
-        s += z
+    for z in range(len(a)):
+        s += str(a[z])
         s += ' '
-    return s
+    return s[:-1]
 
-def string_3(a):
-    t = insertion_sort_3(a)
+def string_plus(a):
     s = ''
-    m1 = [str(x) for x in t]
-    for z in m1:
-        s += z
-        s += ' '
-    return s
+    for z in range(len(a)):
+        s += str(a[z])
+        s += ', '
+    return s[:-2]
 
 def convert_to_string(a):
     s = ''
@@ -66,12 +65,24 @@ def write_s_plus(a, res):
     f1. close()
 
 def check(l, m):
-    if l == 0 or l > 10 ** 3: print("Лимит длины превышен")
-    if l != len(m): print("Ошибка")
+    if not(0<=l<=10**3):
+        return False
+    if l != len(m):
+        return False
     for i in range(len(m)):
-        if abs(m[i]) > 10 ** 9: print("Ошибка")
-    else:
-        return "Входные данные корректны"
+        if abs(m[i]) > 10 ** 9:
+            return False
+    return True
+
+def check_four(n, m):
+
+    if not(0<=len(m)<=10**3):
+        return False
+
+    if not(abs(n)<=10**3):
+        return False
+
+    return True
 
 def check_task_two(a):
     f1 = open(a,"r")
