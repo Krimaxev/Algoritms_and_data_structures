@@ -31,3 +31,4 @@ if __name__=="__main__":
     FILE_INPUT = "../txtf/input_task_6"
     FILE_OUTPUT = "../txtf/output_task_6"
     max_subarray(FILE_INPUT,FILE_OUTPUT)
+    print("В файле src задания №6 ЛР №2 код работает исправно")

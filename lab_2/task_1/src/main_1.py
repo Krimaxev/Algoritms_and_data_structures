@@ -1,4 +1,4 @@
-from lab_2.utils import *
+from lab_2.utils import read_input, write_output, string, output_file
 
 def merge(left_list, right_list):
     res = []
@@ -33,14 +33,14 @@ def merge_sort(x):
 
 
 if __name__=="__main__":
-    INPUT_FILE = "../txtf/test_1_input"
-    OUTPUT_FILE = "../txtf/test_1_output"
+    INPUT_FILE = "../txtf/input_task_1"
+    OUTPUT_FILE = "../txtf/output_task_1"
 
     data = read_input(INPUT_FILE)
     if data:
-        sorted_data = merge_sort(data)
-        write_output(output_file, sorted_data)
+        sorted_data = string(merge_sort(data))
+        write_output(OUTPUT_FILE, sorted_data)
+        print("В файле src задания №1 ЛР №2 код работает исправно")
 
-    print(first_check(input_file_n(INPUT_FILE),operation_with_file(INPUT_FILE)))
 
 

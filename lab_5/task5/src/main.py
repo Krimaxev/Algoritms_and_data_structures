@@ -22,7 +22,7 @@ if __name__=="__main__":
     if check:
         result = job_scheduler(n, jobs)
         output_operation_five(FILE_OUTPUT,result)
-        print("Входные данные корректны")
+        print("В файле src задания №5 ЛР №5 код работает исправно")
     else:
         output_operation(FILE_OUTPUT,"ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

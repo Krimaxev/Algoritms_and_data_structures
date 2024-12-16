@@ -16,7 +16,7 @@ if __name__=="__main__":
     if check:
         result = last_number_fibonacci(open_f)
         write_file(FILE_OUTPUT, result)
-        print("Входные данные корректны")
+        print("В файле src задания №3 ЛР №0 код работает исправно")
     else:
         write_file(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

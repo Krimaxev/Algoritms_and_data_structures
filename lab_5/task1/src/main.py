@@ -23,7 +23,7 @@ if __name__=="__main__":
     result = heap(length_line,line)
     if check:
         output_operation(FILE_OUTPUT,result)
-        print("Входные данные корректны")
+        print("В файле src задания №1 ЛР №5 код работает исправно")
     if not(check):
         output_operation(FILE_OUTPUT,"ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

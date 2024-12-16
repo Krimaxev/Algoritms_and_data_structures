@@ -34,7 +34,7 @@ if __name__=="__main__":
     check = check_three(FILE_INPUT)
     if check:
         write_output(FILE_OUTPUT,bracket_sequence(list))
-        print("Входные данные корректны")
+        print("В файле src задания №3 ЛР №4 код работает исправно")
     else:
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")
 

@@ -21,3 +21,4 @@ if __name__=="__main__":
     vote = process_votes(line)
 
     write_file_votes(FILE_OUTPUT, vote)
+    print("В файле src задания №5 ЛР №6 код работает исправно")

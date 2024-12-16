@@ -24,7 +24,7 @@ if __name__=="__main__":
     if check:
         result = string(insertion_sort(values))
         output_f(FILE_OUTPUT, result)
-        print("Входные данные корректны")
+        print("В файле src задания №1 ЛР №1 код работает исправно")
     else:
         output_f(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

@@ -34,7 +34,7 @@ if __name__=="__main__":
     if check:
         result = process_stack(list)
         write_output(FILE_OUTPUT,string_column(result))
-        print("Входные данные корректны")
+        print("В файле src задания №5 ЛР №4 код работает исправно")
     else:
         write_output(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

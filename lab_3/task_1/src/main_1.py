@@ -70,7 +70,7 @@ if __name__=="__main__":
         result = input_operation(input_f)
         quicksort_threeway(result)
         output_operation(output_f, string(result))
-        print(f"Входные данные в файле: {input_f} корректны")
+        print("В файле src задания №1 ЛР №3 код работает исправно")
     else:
         output_operation(output_f, "Ошибка входных данных")
         print(f"Ошибка входных данных в файле: {input_f}")
@@ -79,7 +79,7 @@ if __name__=="__main__":
         result2 = input_operation(input_f2)
         quicksort_threeway(result2)
         output_operation(output_f2, string(result2))
-        print(f"Входные данные в файле: {input_f2} корректны")
+
     else:
         output_operation(output_f2, "Ошибка входных данных")
         print(f"Ошибка входных данных в файле: {input_f2}")

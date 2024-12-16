@@ -17,18 +17,17 @@ def read_input(filepath):
     try:
         with open(filepath, 'r') as f:
             n = int(f.readline())
-            line = f.readline().strip()
-            return [int(x) for x in line.split()]
+            line = f.readline()
+            m = [int(x) for x in line.split()]
+            return m
     except (FileNotFoundError, ValueError) as e:
         print(f"Ошибка при чтении входного файла: {e}")
         return None
 
 def write_output(filepath, arr):
-    try:
-        with open(filepath, 'w') as f:
-            f.write(' '.join(map(str, arr)))
-    except Exception as e:
-        print(f"Ошибка при записи в выходной файл: {e}")
+    with open(filepath, 'w') as f:
+        f.write(str(arr))
+
 
 
 def first_check(input_data, sorted_data):
@@ -74,26 +73,23 @@ def string(a):
 
 def first_check(len_1,list_1):
     if (len_1==0 or len_1>(2*10**5)):
-        return "Отсутствие/превышение лимита длины"
-    if (len_1 != len(list_1)):
-        return "Ошибка"
-    for j in range(len(list_1)):
-        for k in list_1[j]:
-            if abs(k) > 10 ** 9:
-                return "Лимит одного из элементов превышен"
-    else:
-        return "Входные данные корректны"
-
-def check(len_1,list_1):
-    if (len_1==0 or len_1>10**5):
         return False
     if (len_1 != len(list_1)):
         return False
     for j in range(len(list_1)):
         if abs(list_1[j]) > 10 ** 9:
             return False
-    else:
-        return True
+    return True
+
+def check(len_1,list_1):
+    if not(0<len_1<=10**5):
+        return False
+    if (int(len_1) != len(list_1)):
+        return False
+    for j in range(len(list_1)):
+        if abs(list_1[j]) > 10 ** 9:
+            return False
+    return True
 
 def second_check(len_1,len_2,list_1,list_2):
     if (len_1==0 or len_1>10**5) or (len_2 == 0 or len_2 > 10 ** 5):

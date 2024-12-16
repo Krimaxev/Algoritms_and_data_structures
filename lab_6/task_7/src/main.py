@@ -19,7 +19,7 @@ if __name__=="__main__":
     if check:
         result = count_beautiful_pairs(S)
         write_file_back(FILE_OUTPUT, result)
-        print("Входные данные корректны")
+        print("В файле src задания №7 ЛР №6 код работает исправно")
     else:
         write_file_back(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

@@ -43,6 +43,7 @@ if __name__=="__main__":
         conv_2 = str(convert_to_string_2(ins_sort))
         conv_3 = conv_2 + "\n" + conv_1
         write_s(FILE_OUTPUT,conv_3)
+        print("В файле src задания №2 ЛР №1 код работает исправно")
     else:
         write_s(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

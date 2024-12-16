@@ -23,7 +23,7 @@ if __name__ == "__main__":
     if point_check:
         result = closest_points(points, k)
         write_output(FILE_OUTPUT, result)
-        print("Входные данные корректны")
+        print("В файле src задания №8 ЛР №3 код работает исправно")
     else:
         output_operation(FILE_OUTPUT, "Ошибка входных данных")
         print("Ошибка входных данных")

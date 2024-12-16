@@ -22,7 +22,7 @@ if __name__=="__main__":
 
         time_elapsed = (time.perf_counter() - time_start)
         memMb = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024.0 / 1024.0
-
+        print("В файле src задания №4 ЛР №0 код подзадания 4.2 работает исправно")
         print("ВРЕМЯ:", time_elapsed)
         print("Память:%5.1f МБ" % (memMb))
     else:

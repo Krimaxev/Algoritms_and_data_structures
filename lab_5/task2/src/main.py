@@ -27,7 +27,7 @@ if __name__=="__main__":
     if check:
         result = compute_tree_height(length_line,PARENTS)
         output_operation(OUTPUT_FILE,result)
-        print("Входные данные корректны")
+        print("В файле src задания №2 ЛР №5 код работает исправно")
     else:
         output_operation(OUTPUT_FILE, "ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

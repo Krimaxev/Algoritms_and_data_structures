@@ -66,3 +66,4 @@ if __name__=="__main__":
     FILE_INPUT = "../txtf/input_task_9"
     FILE_OUTPUT = "../txtf/output_task_9"
     check(FILE_INPUT, FILE_OUTPUT)
+    print("В файле src задания №9 (Strassen) ЛР №2 код работает исправно")

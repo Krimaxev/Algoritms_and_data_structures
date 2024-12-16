@@ -28,7 +28,7 @@ if __name__=="__main__":
         n, a, m = argues[0], argues[1], argues[2]
         result = max_dynamic_sequence(n, a, m)
         write_output(FILE_OUTPUT,string(result))
-        print("Входные данные корректны")
+        print("В файле src задания №7 ЛР №4 код работает исправно")
 
     else:
         write_output(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")

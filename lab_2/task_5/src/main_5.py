@@ -18,8 +18,8 @@ if __name__=="__main__":
     check_f = check(input_file_n(FILE_INPUT),file)
     if check_f:
         res = majority(file)
-        file_o = output_file(FILE_INPUT,str(res))
-        print("Входные данные корректны")
+        file_o = output_file(FILE_OUTPUT,str(res))
+        print("В файле src задания №5 ЛР №2 код работает исправно")
     else:
         output_file(FILE_OUTPUT, "Ошибка входных данных")
         print("Ошибка входных данных")

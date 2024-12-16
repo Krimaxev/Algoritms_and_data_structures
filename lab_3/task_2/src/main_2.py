@@ -19,6 +19,6 @@ if __name__ == "__main__":
         worst_case_permutation = generate_worst_case(t)
         res = string(worst_case_permutation)
         output_operation(FILE_OUTPUT,res)
-        print("Входное значение корректно")
+        print("В файле src задания №2 ЛР №3 код работает исправно")
     else:
         print("Входное значение некорректно")

@@ -29,7 +29,7 @@ if __name__=="__main__":
     if check:
         results = process_packets(buf_size, packets)
         output_operation(FILE_OUTPUT, results)
-        print("Входные данные корректны")
+        print("В файле src задания №3 ЛР №5 код работает исправно")
     else:
         output_operation(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАНННЫХ")

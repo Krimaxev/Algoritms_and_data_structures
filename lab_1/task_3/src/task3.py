@@ -20,7 +20,7 @@ if __name__=="__main__":
     if check:
         result = string(insertion_sort_three(values))
         write_s(FILE_OUTPUT, result)
-        print("Входные данные корректны")
+        print("В файле src задания №3 ЛР №1 код работает исправно")
     else:
         write_s(FILE_OUTPUT,"ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

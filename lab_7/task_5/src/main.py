@@ -27,7 +27,7 @@ if __name__=="__main__":
     if check:
         result = longest_common_subsequence(sequence_1, sequence_2, sequence_3)
         write_file(FILE_OUTPUT, result)
-        print("Входные данные корректны")
+        print("В файле src задания №5 ЛР №7 код работает исправно")
     else:
         write_file(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

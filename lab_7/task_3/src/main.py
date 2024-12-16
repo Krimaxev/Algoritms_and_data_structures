@@ -59,7 +59,7 @@ if __name__=="__main__":
     if check:
         distance, result_operation = levenshtein_distance_and_path(l1, l2)
         write_split_lines(FILE_OUTPUT, distance, result_operation)
-        print("Входные данные корректны")
+        print("В файле src задания №3 ЛР №7 код работает исправно")
 
     else:
         write_file(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")

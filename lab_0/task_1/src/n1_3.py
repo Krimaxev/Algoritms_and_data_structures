@@ -12,7 +12,7 @@ if __name__=="__main__":
     if check:
         result = summ_file(first_elem, second_elem)
         write_file(FILE_OUTPUT, result)
-        print("Входные данные корректны")
+        print("В файле src задания №1 ЛР №0 код подзадания 1.3 работает исправно")
     else:
         write_file(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

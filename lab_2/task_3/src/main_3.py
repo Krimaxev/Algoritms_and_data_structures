@@ -17,7 +17,7 @@ if __name__=="__main__":
     check_list = check(input_file_n(FILE_INPUT),operation_with_file(FILE_INPUT))
     if check_list:
         output = output_file(FILE_OUTPUT, str(res))
-        print("Входные данные корректны")
+        print("В файле src задания №3 ЛР №2 код работает исправно")
     else:
         output_file(FILE_OUTPUT, "Ошибка входных данных")
         print("Ошибка входных данных")

@@ -27,7 +27,7 @@ if __name__=="__main__":
     if check:
         results = answer(file_1,file_2)
         file_o = output_file(FILE_OUTPUT, results)
-        print("Входные данные корректны")
+        print("В файле src задания №4 ЛР №2 код работает исправно")
     else:
         file_o = output_file(FILE_OUTPUT, "Ошибка входных данных")
         print("Ошибка входных данных")

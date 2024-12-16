@@ -28,7 +28,7 @@ if __name__=="__main__":
     if check:
         list = read_input(FILE_INPUT)
         write_output(FILE_OUTPUT,string_column(process_requests(list[1:],list)))
-        print("Входные данные корректны")
+        print("В файле src задания №9 ЛР №4 код работает исправно")
 
     else:
         write_output(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")

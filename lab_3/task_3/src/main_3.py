@@ -30,7 +30,7 @@ if __name__=="__main__":
             file_o = output_operation(FILE_OUTPUT,"ДА")
         if not(result):
             file_o = output_operation(FILE_OUTPUT, "НЕТ")
-        print("Входные данные корректны")
+        print("В файле src задания №3 ЛР №3 код работает исправно")
     else:
         output_operation(FILE_OUTPUT, "Входные данные некорректны")
         print("Входные данные некорректны")

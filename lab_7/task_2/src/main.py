@@ -31,7 +31,7 @@ if __name__=="__main__":
         min_operations, line_of_values = primitive_calculator(number)
         result = string_write(line_of_values)
         write_min_operation(FILE_OUTPUT, min_operations, result)
-        print("Входные данные корректны")
+        print("В файле src задания №2 ЛР №7 код работает исправно")
     else:
         write_file(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

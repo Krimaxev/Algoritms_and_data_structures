@@ -62,7 +62,7 @@ if __name__=="__main__":
     if check:
         result = execute_operations(operation)
         write_one(FILE_OUTPUT, result)
-        print("Входные данные корректны")
+        print("В файле src задания №4 ЛР №6 код работает исправно")
     else:
         write_one(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

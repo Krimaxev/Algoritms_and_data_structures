@@ -26,7 +26,7 @@ if __name__=="__main__":
     if check:
         result = min_change(coins, money)
         write_file(FILE_OUTPUT, result)
-        print("Входные данные корректны")
+        print("В файле src задания №1 ЛР №7 код работает исправно")
     else:
         write_file(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")

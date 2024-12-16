@@ -19,7 +19,7 @@ if __name__=="__main__":
     if check:
         result = line_find(n,m)
         write_s(FILE_OUTPUT,result)
-        print("Входные данные корректны")
+        print("В файле src задания №4 ЛР №1 код работает исправно")
     else:
         write_s(FILE_OUTPUT, "ОШИБКА ВХОДНЫХ ДАННЫХ")
         raise ValueError("ОШИБКА ВХОДНЫХ ДАННЫХ")
