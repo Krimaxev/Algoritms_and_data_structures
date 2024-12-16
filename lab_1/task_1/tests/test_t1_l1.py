@@ -60,7 +60,7 @@ class TestInsertionSort(unittest.TestCase):
 
     def test_memory_and_time_consumption(self):
         # Given
-        input_data = [i for i in range(1000, 0, -1)]  # Reverse sorted list
+        input_data = [i for i in range(1000, 0, -1)]
         start_time = time.time()
         start_memory = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
         # When
