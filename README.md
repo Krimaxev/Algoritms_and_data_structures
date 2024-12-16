@@ -4,16 +4,17 @@
 
 # Лабораторные работы
 
-- [x] Лабораторная работа №0
-- [x] Лабораторная работа №1
-- [x] Лабораторная работа №2
-- [x] Лабораторная работа №3
-- [x] Лабораторная работа №4
-- [x] Лабораторная работа №5
-- [x] Лабораторная работа №6
-- [x] Лабораторная работа №7
+<ul>
+  <li><a href="https://github.com/Krimaxev/Algoritms_and_data_structures/tree/main/lab_0" target="_blank">Лабораторная работа №0</a></li>
+  <li><a href="https://github.com/Krimaxev/Algoritms_and_data_structures/tree/main/lab_1" target="_blank">Лабораторная работа №1</a></li>
+  <li><a href="https://github.com/Krimaxev/Algoritms_and_data_structures/tree/main/lab_2" target="_blank">Лабораторная работа №2</a></li>
+  <li><a href="https://github.com/Krimaxev/Algoritms_and_data_structures/tree/main/lab_3" target="_blank">Лабораторная работа №3</a></li>
+  <li><a href="https://github.com/Krimaxev/Algoritms_and_data_structures/tree/main/lab_4" target="_blank">Лабораторная работа №4</a></li>
+  <li><a href="https://github.com/Krimaxev/Algoritms_and_data_structures/tree/main/lab_5" target="_blank">Лабораторная работа №5</a></li>
+  <li><a href="https://github.com/Krimaxev/Algoritms_and_data_structures/tree/main/lab_6" target="_blank">Лабораторная работа №6</a></li>
+  <li><a href="https://github.com/Krimaxev/Algoritms_and_data_structures/tree/main/lab_7" target="_blank">Лабораторная работа №7</a></li>
+</ul>
 
----
 
 ## Описание
 
