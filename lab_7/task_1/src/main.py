@@ -17,6 +17,7 @@ def min_change(coin, total):
     return counts[total]
 
 
+
 if __name__=="__main__":
     FILE_INPUT = "../txtf/input.txt"
     FILE_OUTPUT = "../txtf/output.txt"
